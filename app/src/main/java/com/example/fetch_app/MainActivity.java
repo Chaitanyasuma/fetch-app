@@ -9,19 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.fetch_app.model.CustomListAdapter;
 import com.example.fetch_app.model.Element;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import android.os.Bundle;
-import android.widget.ListView;
-import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,6 +20,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,46 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         //new
         new FetchDataTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
-//        // Sample data
-//        ArrayList<Element> elements = new ArrayList<>();
-//        elements.add(new Element(1, 101, "Item 1"));
-//        elements.add(new Element(2, 102, "Item 2"));
-//        elements.add(new Element(3, 101, "Item 3"));
-//        elements.add(new Element(4, 103, "Item 4"));
-//        elements.add(new Element(5, 102, "Item 5"));
-
-//        // Group elements by listId using TreeMap
-//        Map<Integer, ArrayList<Element>> groupedElements = new TreeMap<>();
-//        for (Element element : elements) {
-//            int listId = element.getListId();
-//            if (!groupedElements.containsKey(listId)) {
-//                groupedElements.put(listId, new ArrayList<>());
-//            }
-//            groupedElements.get(listId).add(element);
-//        }
-//
-//        // Sort elements within each group by name
-//        for (ArrayList<Element> group : groupedElements.values()) {
-//            Collections.sort(group, new Comparator<Element>() {
-//                @Override
-//                public int compare(Element e1, Element e2) {
-//                    return e1.getName().compareToIgnoreCase(e2.getName());
-//                }
-//            });
-//        }
-//
-//        // Flatten the sorted and grouped elements into a single list
-//        ArrayList<Element> sortedAndGroupedElements = new ArrayList<>();
-//        for (ArrayList<Element> group : groupedElements.values()) {
-//            sortedAndGroupedElements.addAll(group);
-//        }
-//
-//        CustomListAdapter adapter = new CustomListAdapter(this, sortedAndGroupedElements);
-//
-//        ListView listView = (ListView) findViewById(R.id.listView);
-//
-//        listView.setAdapter(adapter);
     }
 
     private class FetchDataTask extends AsyncTask<Void, Void, ArrayList<Element>> {
