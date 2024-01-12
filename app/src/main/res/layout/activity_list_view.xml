@@ -1,0 +1,36 @@
+<!-- activity_list_view.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- ID TextView -->
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textStyle="bold" />
+
+    <!-- ListID TextView -->
+    <TextView
+        android:id="@+id/listID"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="ListID"
+        android:textStyle="bold" />
+
+    <!-- Name TextView -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold" />
+
+</LinearLayout>
